@@ -1,0 +1,27 @@
+/*-------------Button-----------------*/
+.button {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  @include ai-flex-center();
+  @include jc-flex-center();
+  line-height: 1;
+  font-weight: 700;
+  white-space: nowrap;
+  border-radius: 0 !important;
+  @include transition-03();
+  position: relative;
+  outline: none !important;
+
+
+  &:hover,
+  &:focus,
+  &:active {
+
+  }
+
+  @include respond-min(570){
+
+  }
+}
+

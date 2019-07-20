@@ -1,0 +1,24 @@
+.modal-interest{
+  .modal__content{
+    p{
+      max-width: 185px;
+    }
+  }
+  @include respond-min(992){
+    .modal__content{
+      p{
+        max-width: 424px;
+      }
+    }
+  }
+}
+
+.form-interest__wrap{
+  max-width: 680px;
+  @include center();
+  margin-top: 30px;
+
+  @include respond-min(992){
+    margin-top: 30px;
+  }
+}

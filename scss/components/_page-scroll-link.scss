@@ -1,0 +1,15 @@
+.page-scroll__link {
+  display: block;
+  @include size(17px, 9px);
+  @include center();
+  background: url('#{$imgUrl}general/arrow-down.svg') no-repeat center /contain;
+  margin-top: 20px;
+
+  &:hover, &:focus, &:active {
+    @include animation(move-on-hover, 0.7, 0, 2);
+  }
+
+  @include respond-min(992){
+    margin-top: 40px;
+  }
+}

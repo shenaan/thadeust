@@ -1,0 +1,84 @@
+h1, .h1 {
+  font-size: 35px;
+  font-family: $IvyMode;
+  font-weight: 400;
+  line-height: 35px;
+  text-transform: uppercase;
+  @include respond-min(992) {
+    font-size: 55px;
+    line-height: 62px;
+  }
+}
+
+h2, .h2 {
+  font-family: $IvyMode;
+  font-size: 25px;
+  font-weight: 400;
+  line-height: 41px;
+  text-transform: uppercase;
+  @include respond-min(992) {
+    font-size: 32px;
+    line-height: 52px;
+  }
+}
+
+h3, .h3 {
+  font-family: $Forma;
+  font-size: 20px;
+  font-weight: 400;
+  letter-spacing: 1.2px;
+  line-height: 23px;
+  text-transform: uppercase;
+
+  @include respond-min(992) {
+    font-size: 25px;
+    line-height: 28px;
+    letter-spacing: 1.5px;
+  }
+  @include respond-min(1200) {
+
+  }
+}
+
+h4, .h4 {
+  font-family: $InputMono;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 1.12px;
+  line-height: 22px;
+  text-transform: uppercase;
+  color: $greenColor;
+  @include respond-min(992) {
+    font-size: 18px;
+    letter-spacing: 1.44px;
+    line-height: 25px;
+  }
+}
+
+h5, .h5 {
+  font-family: $InputMono;
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 1.28px;
+  line-height: 25px;
+  text-transform: uppercase;
+  color: $greenColor;
+  @include respond-min(992) {
+
+  }
+  @include respond-min(1200) {
+
+  }
+}
+
+p {
+  font-family: $IvyJournal;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 22px;
+
+  @include respond-min(992) {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}

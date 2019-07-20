@@ -1,0 +1,52 @@
+.fullpage {
+
+  &.contact{
+
+    .page-section__footer{
+      height: auto !important;
+      min-height: 100px !important;
+
+      .fp-tableCell {
+        height: auto !important;
+      }
+    }
+  }
+
+  .fp-slides{
+    overflow: visible !important;
+    width: 100% !important;
+  }
+  .fp-slidesContainer{
+    width: 100% !important;
+  }
+  .slide{
+    width: 100% !important;
+  }
+  .fp-controlArrow{
+    display: none;
+  }
+
+  @include respond-max(992) {
+    height: auto !important;
+    @include display-flex();
+    @include flex-direction-col();
+
+    .section {
+      height: auto !important;
+      min-height: 100vh !important;
+      &.section__hero{
+        height: 100vh !important;
+        //min-height: 640px !important;
+        min-height: 100vh !important;
+      }
+      &.services-lifestyle{
+        height: 100vh !important;
+      }
+    }
+  }
+  @include respond-min(992){
+    .slide{
+      width: 50% !important;
+    }
+  }
+}

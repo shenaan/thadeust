@@ -1,0 +1,43 @@
+.header-stock{
+  background-color: $greenColor;
+  color: $textColor;
+  text-transform: uppercase;
+  font-family: $InputMono;
+  font-size: 12px;
+  font-weight: 200;
+  letter-spacing: 0.88px;
+  padding: 5px 0;
+  margin-top: 17px;
+  white-space: nowrap;
+  overflow: hidden;
+  @include respond-min(992){
+    margin-top: 24px;
+    font-size: 16px;
+    font-weight: 200;
+    letter-spacing: 1.28px;
+  }
+}
+
+.header-stock__slider{
+  visibility: hidden;
+  opacity: 0;
+  height: 22px;
+  &.slick-initialized{
+    opacity: 1;
+    visibility: visible;
+    height: auto;
+  }
+}
+
+.header-stock__item{
+  padding: 0 5px;
+  //border: 1px solid black;
+  span{
+    padding: 0 4px;
+  }
+}
+
+.header-stock__item-inner{
+  @include display-flex();
+  @include ai-flex-center();
+}

@@ -1,0 +1,94 @@
+/*------Mail subscribe-------*/
+.page-contact__mail {
+  padding: 70px 0;
+  background-color: #fff;
+
+  @include respond-min(992) {
+    padding: 35px 0;
+  }
+}
+
+.page-contact__mail-inner {
+  @include display-flex();
+  @include flex-wrap();
+
+  @include respond-min(992) {
+    @include flex-nowrap();
+  }
+}
+
+.page-contact__mail-item {
+  width: 100%;
+  max-width: 100%;
+
+  @include respond-min(992) {
+    width: 50%;
+    max-width: 50%;
+  }
+}
+
+.page-contact__label {
+  margin-bottom: 50px;
+  p {
+    max-width: 215px;
+    text-align: center;
+    @include center();
+  }
+  @include respond-min(992) {
+    margin-bottom: 0;
+    p {
+      max-width: 347px;
+      text-align: left;
+      margin-left: 0;
+    }
+  }
+}
+
+.page-contact__mail-form {
+  margin-top: auto;
+  margin-bottom: 2px;
+}
+
+.page-contact__form-row {
+  @include display-flex();
+  @include flex-wrap();
+
+  @include respond-min(992) {
+    @include flex-nowrap();
+  }
+}
+
+.page-contact__form-input-wrap {
+  width: 100%;
+  max-width: 100%;
+  margin-bottom: 50px;
+  input {
+    color: rgba(29, 30, 28, 0.2);
+    border-bottom: 1px solid $textColor !important;
+    padding-bottom: 2px;
+    @include input-placeholder(){
+      color: rgba(29, 30, 28, 0.2);
+      font-size: inherit;
+    }
+  }
+
+  @include respond-min(992) {
+    width: calc(100% - 90px);
+    max-width: calc(100% - 90px);
+    margin-bottom: 0;
+    input {
+      font-size: 16px;
+      letter-spacing: 1.28px;
+      line-height: 23px;
+    }
+  }
+}
+
+.page-form__submit-wrap {
+  margin-left: auto;
+  margin-right: auto;
+  @include respond-min(992) {
+    margin-top: auto;
+    margin-right: 0;
+  }
+}

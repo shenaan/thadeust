@@ -1,0 +1,47 @@
+.contact-section{
+
+  .page-section__col-content{
+    max-width: 527px;
+    text-align: center;
+    br{
+      display: none;
+    }
+  }
+  .page-section__col-img{
+    height: 420px;
+  }
+  @include respond-min(576){
+    .page-section__col-img{
+      height: 520px;
+    }
+  }
+  @include respond-min(992){
+    .page-section__col-img{
+      height: 100%;
+    }
+  }
+}
+
+.contact-section__london{
+  padding-top: 97px;
+  .page-section__col-text{
+    padding: 120px 15px 150px;
+  }
+  @include respond-min(576) {
+    .page-section__col-text {
+      padding: 120px 45px 150px;
+    }
+  }
+  @include respond-min(992){
+    padding-top: 0;
+  }
+}
+
+.contact__map{
+  width: 100%;
+  height: 100%;
+  iframe{
+    @include square(inherit);
+  }
+
+}

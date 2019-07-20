@@ -1,0 +1,25 @@
+$Forma: "forma-djr-text",sans-serif;
+$InputMono: "input-mono",monospace;
+$IvyJournal: "ivyjournal",sans-serif;
+$IvyMode: "ivymode",sans-serif;
+
+$baseFontFamily: $Forma;
+
+@mixin font-size($size:18) {
+  font-size: $size * 1px;
+  font-size: ($size / $baseFontSize) * 1rem;
+}
+
+$baseFontSize: 20;
+$baseFontSizePixel: $baseFontSize * 1px;
+
+$baseLineHeight: 1.4;
+$baseLetterSpacing: 0;
+$textColor: #1d1e1c;
+$bodyBackground: #fff;
+
+$greenColor: #59d194;
+
+$fontsUrl: "../fonts/";
+$imgUrl: "../img/";
+

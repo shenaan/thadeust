@@ -1,0 +1,106 @@
+.footer{
+  background: $greenColor;
+  padding: 35px 0;
+
+  a{
+    color: $textColor;
+    font-family: $Forma;
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 12px;
+    letter-spacing: 0.72px;
+    line-height: 35px;
+  }
+  @include respond-min(992){
+    padding: 8px 0;
+    a{
+      font-size: 13px;
+      letter-spacing: 0.78px;
+      line-height: 35px;
+    }
+  }
+}
+
+.footer__inner{
+  @include display-flex();
+  @include flex-wrap();
+
+  @include respond-min(992){
+   @include flex-nowrap();
+  }
+}
+
+.footer__inner-item{
+  width: 100%;
+  max-width: 100%;
+
+  @include respond-min(992){
+    width: 35%;
+    max-width: 35%;
+  }
+}
+
+.footer-copyright{
+  text-align: center;
+  p{
+    font-family: $Forma;
+    opacity: 0.5;
+    font-size: 13px;
+    font-weight: 400;
+    letter-spacing: 0.54px;
+    line-height: 35px;
+  }
+  @include respond-min(992){
+    text-align: left;
+    p{
+      opacity: 1;
+      font-size: 13px;
+      letter-spacing: 0.78px;
+      line-height: 35px;
+    }
+  }
+}
+
+.footer-nav{
+  @include center();
+
+  @include respond-min(992){
+    margin-left: auto;
+    margin-right: 0;
+    width: 65%;
+    max-width: 65%;
+  }
+}
+
+.footer-nav__list{
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  text-align: center;
+  @include display-flex();
+  @include jc-flex-center();
+  @include flex-wrap();
+  @include respond-min(992){
+    @include jc-flex-end();
+  }
+}
+
+.footer-nav__list-item{
+  display: inline-block;
+  margin: 0 10px;
+  
+  &:hover, &:focus, &:active{
+    .footer-nav__list-link{
+      color: #fff;
+    }
+  }
+
+  @include respond-min(992){
+    margin: 0 12px;
+    &:last-of-type{
+      margin-right: 0;
+    }
+  }
+}
+
+

@@ -1,0 +1,157 @@
+.section__hero {
+  position: relative;
+  padding-top: 100px;
+  height: 100vh;
+  min-height: 500px;
+  overflow: hidden;
+
+  &.is-active {
+
+  }
+
+  @include respond-min(992) {
+    padding-top: 140px;
+    min-height: 640px;
+  }
+}
+
+.hero__bg {
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: rgba(255, 255, 255, 0.3);
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  @include size(100%, 100vh);
+  z-index: 0;
+  @include transition-homepage();
+}
+
+.hero__active {
+  z-index: -1;
+  opacity: 0.8;
+}
+
+.hero__inner {
+  @include square(100%);
+  max-height: 100%;
+  @include display-flex();
+  @include flex-direction-col();
+  @include ai-flex-center();
+  @include jc-flex-center();
+  position: relative;
+  padding-bottom: 200px;
+}
+
+.hero__inner-content--default {
+  margin-bottom: -200px;
+  @include transition-homepage();
+}
+
+.hero__title {
+  text-align: center;
+  width: 100%;
+  .h1 {
+    font-size: 55px;
+    font-weight: 400;
+    line-height: 50px;
+    margin-bottom: 30px;
+  }
+
+  @include respond-min(992) {
+    .h1 {
+      font-size: 65px;
+      line-height: 85px;
+      margin-bottom: 0;
+    }
+  }
+  @include respond-min(1200) {
+    .h1 {
+      font-size: 77px;
+      line-height: 101px;
+    }
+  }
+  @include respond-min(1440){
+    .h1{
+      font-size: 90px;
+      line-height: 130px;
+    }
+    h3{
+      font-size: 30px;
+      line-height: 33px;
+    }
+  }
+  @include respond-min(1660){
+    .h1{
+      font-size: 110px;
+      line-height: 157px;
+    }
+    h3{
+      font-size: 35px;
+      line-height: 39px;
+    }
+  }
+}
+
+.hero__shape {
+  width: 60px;
+  @include center();
+  position: absolute;
+  bottom: 55px;
+  left: 0;
+  right: 0;
+  img {
+    width: 100%;
+  }
+  @include respond-min(992) {
+    bottom: 112px;
+  }
+}
+
+.hero__inner-content--active {
+  opacity: 0;
+  color: #fff;
+  position: absolute;
+  bottom: 55px;
+  left: 0;
+  right: 0;
+  text-transform: uppercase;
+  @include center();
+  margin-top: auto;
+  margin-bottom: 50px;
+  text-align: center;
+  width: 100%;
+  z-index: -1;
+  //@include transform-scale(0.8, 1);
+
+  h5 {
+    color: inherit;
+  }
+}
+
+.hero-scroll__link {
+  display: inline-block;
+  color: inherit;
+  -webkit-transition: none;
+  -o-transition: none;
+  transition: none;
+
+  &:hover, &:focus, &:active {
+    .hero-scroll__icon {
+      @include animation(move-on-hover, 0.7, 0, 2);
+    }
+  }
+}
+
+.hero-scroll__icon {
+  display: block;
+  @include size(17px, 8px);
+  background: url("#{$imgUrl}general/arrow-down.svg") no-repeat center /contain;
+  margin-bottom: 25px;
+  @include center();
+  stroke: #fff;
+  fill: none;
+}

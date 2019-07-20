@@ -1,0 +1,222 @@
+.header {
+  padding: 17px 0 0;
+  background-color: $textColor;
+  color: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 100%;
+  z-index: 151;
+  font-family: $Forma;
+  @include transition-03();
+
+  @include respond-min(992) {
+    padding: 24px 0 0;
+  }
+}
+
+.header--white{
+  background-color: #fff;
+  color: $textColor;
+
+  .header__logo{
+    position: relative;
+    &:before{
+      content: '';
+      display: block;
+      background: url("#{$imgUrl}logo-dark.svg")no-repeat center /contain;
+      @include square(100%);
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 1;
+    }
+    img{
+      opacity: 0;
+      visibility: hidden;
+    }
+  }
+
+  .header__lang-item{
+    color: $textColor;
+    opacity: 0.3;
+    &.is-active, &:hover, &:focus, &:active{
+      opacity: 1;
+      color: $textColor;
+    }
+  }
+
+  .header__message-link svg{
+    fill: $textColor;
+  }
+
+  .header__menu-btn{
+    color: $textColor;
+  }
+  .header-stock{
+    background-color: $textColor;
+    color: $greenColor;
+  }
+
+  .hamburger{
+    .line{
+      background-color: $textColor;
+    }
+    &.is-active{
+      .line{
+        background-color: $textColor;
+      }
+    }
+  }
+}
+
+.header__inner {
+  @include display-flex();
+  @include ai-flex-center();
+}
+
+.header__logo {
+  @include size(145px, 25px);
+  @include respond-min(992) {
+    @include size(242px, 40px);
+  }
+}
+
+.header__inner--right {
+  margin-left: auto;
+  @include display-flex();
+  @include ai-flex-center();
+}
+
+.header__lang {
+  font-size: 30px;
+  line-height: 30px;
+}
+
+.header__lang-item {
+  display: inline-block;
+  color: rgba(255, 255, 255, 0.3);
+  font-size: 30px;
+  letter-spacing: 1.8px;
+  text-transform: uppercase;
+  vertical-align: top;
+  padding-top: 7px;
+  &:last-of-type {
+    &:before {
+      content: '/';
+      display: inline-block;
+      font-size: inherit;
+      color: inherit;
+      margin: 0 2px;
+    }
+  }
+  &.is-active {
+    color: #fff;
+  }
+
+  &:hover, &:focus, &:active {
+    color: #fff;
+  }
+}
+
+.header__message-link {
+  display: block;
+  @include size(27px, 27px);
+  margin: 0 19px;
+  svg {
+    display: inline-block;
+    @include square(inherit);
+    fill: #fff;
+    @include transition-04();
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-font-smoothing: subpixel-antialiased;
+    -webkit-transform: perspective(1px) translate3d(0, 0, 0);
+    transform: perspective(1px) translate3d(0, 0, 0);
+  }
+
+  &:hover, &:focus, &:active {
+    svg {
+      @include transform-scale(1.03, 1.03);
+    }
+  }
+  @include respond-min(992) {
+    @include size(34px, 35px);
+    margin: 0 31px;
+  }
+}
+
+.header__menu-btn {
+  font-size: 44px;
+  font-weight: 400;
+  letter-spacing: 2.64px;
+  text-transform: uppercase;
+  border: none !important;
+  background-color: transparent !important;
+  color: #fff;
+  @include respond-min(992){
+    height: 44px;
+  }
+}
+
+/*hamburger*/
+
+.hamburger {
+  display: block;
+  z-index: 10;
+  margin-left: auto;
+  margin-right: 15px;
+  @include transition-03();
+  position: relative;
+
+  &.is-active {
+    z-index: 101;
+
+    .line {
+      -webkit-transition-delay: 0.2s;
+      -o-transition-delay: 0.2s;
+      transition-delay: 0.2s;
+      background-color: #fff;
+      &:nth-child(1) {
+        -webkit-transform: translateY(10px);
+        -ms-transform: translateY(10px);
+        -o-transform: translateY(10px);
+        transform: translateY(10px);
+      }
+      &:nth-child(2) {
+        opacity: 0;
+      }
+      &:nth-child(3) {
+        -webkit-transform: translateY(-10px);
+        -ms-transform: translateY(-10px);
+        -o-transform: translateY(-10px);
+        transform: translateY(-10px);
+      }
+    }
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  .line {
+    width: 35px;
+    height: 3px;
+    background-color: #fff;
+    border-radius: 2px;
+    display: block;
+    margin: 7px auto;
+    @include transition(0.4s all ease);
+    @include transform-origin(right);
+    position: relative;
+  }
+
+  @include respond-min(768) {
+    margin-right: 40px;
+  }
+}
+

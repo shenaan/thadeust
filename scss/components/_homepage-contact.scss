@@ -1,0 +1,84 @@
+.homepage-contact {
+  @include display-flex();
+  @include flex-direction-col();
+  z-index: 10;
+}
+
+.homepage-contact__info {
+  background-color: $textColor;
+  padding: 100px 0;
+  position: relative;
+  @include flex(1 0 auto);
+
+  @include respond-min(992) {
+    padding: 150px 0;
+    .main-container {
+      height: 100%;
+    }
+    .page__link-wrap {
+      position: relative;
+      bottom: auto;
+    }
+  }
+}
+
+.homepage-contact__info-inner {
+  @include display-flex();
+  @include flex-wrap();
+  position: relative;
+
+  @include respond-min(992) {
+    @include flex-nowrap();
+    @include ai-flex-center();
+    height: 100%;
+  }
+}
+
+.homepage-contact__info-item {
+  width: 100%;
+  max-width: 100%;
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 50px;
+
+  @include respond-min(992) {
+    width: 33.33%;
+    max-width: 33.33%;
+    margin-bottom: 0;
+    height: 150px;
+  }
+}
+
+.homepage-contact__info-icon {
+  @include display-flex();
+  @include ai-flex-center();
+  margin-bottom: 20px;
+  height: 34px;
+  svg {
+    fill: #fff;
+    display: block;
+    width: 29px;
+    @include center();
+  }
+
+  @include respond-min(992) {
+    margin-bottom: 40px;
+  }
+}
+
+.homepage-contact__info-text {
+  font-family: $Forma;
+  display: inline-block;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 400;
+  letter-spacing: 1.08px;
+  line-height: 23px;
+
+  @include respond-min(992) {
+    font-size: 22px;
+    letter-spacing: 1.32px;
+    line-height: 27px;
+  }
+}
+

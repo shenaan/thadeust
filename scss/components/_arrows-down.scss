@@ -1,0 +1,6 @@
+.arrows-down{
+  display: inline-block;
+  background: url('#{$imgUrl}general/arrows-down.svg')no-repeat center /contain;
+  @include size(24px, 14px);
+  margin-left: 15px;
+}

@@ -1,0 +1,18 @@
+.show-in-mob{
+  display: block !important;
+  @include respond-min(992){
+    display: none !important;
+  }
+}
+
+.hide-in-mob{
+  display: none !important;
+  @include respond-min(992){
+    display: block !important;
+  }
+}
+
+.is-blurred{
+  -webkit-filter: blur(10px) grayscale(1) contrast(0.85);
+  filter: blur(10px) grayscale(1) contrast(0.85);
+}

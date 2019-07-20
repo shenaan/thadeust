@@ -1,0 +1,33 @@
+.main__scene {
+  transition: 0.7s all ease;
+  &.is-loaded{
+    //opacity: 1 !important;
+  }
+  &.is-loading{
+  }
+  &.is-exiting {
+    .scene_element {
+      animation-direction: alternate-reverse;
+    }
+  }
+
+  .scene__element {
+    @include animation-duration(1);
+    @include animation-fill-mode(both);
+    @include animation-timing-function(ease-in);
+  }
+
+  /** An element that fades in */
+  &.scene__element--fadein {
+    opacity: 0;
+    @include transition(0.4s all ease);
+  }
+}
+
+.page-wrapper{
+  @include transition(0.8s all ease);
+  &.scene__element--fadein {
+    opacity: 0;
+    @include transition(0.8s all ease);
+  }
+}
