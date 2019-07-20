@@ -1,0 +1,24 @@
+@font-face {
+    font-family: 'TN web use only 2';
+    src: url('FormaDJRText-Regular.eot');
+    src: url('FormaDJRText-Regular.eot?#iefix') format('embedded-opentype'),
+        url('FormaDJRText-Regular.woff2') format('woff2'),
+        url('FormaDJRText-Regular.woff') format('woff'),
+        url('FormaDJRText-Regular.ttf') format('truetype'),
+        url('FormaDJRText-Regular.svg#FormaDJRText-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'InputMono';
+    src: url('InputMono-Thin.eot');
+    src: url('InputMono-Thin.eot?#iefix') format('embedded-opentype'),
+        url('InputMono-Thin.woff2') format('woff2'),
+        url('InputMono-Thin.woff') format('woff'),
+        url('InputMono-Thin.ttf') format('truetype'),
+        url('InputMono-Thin.svg#InputMono-Thin') format('svg');
+    font-weight: 100;
+    font-style: normal;
+}
+
