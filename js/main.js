@@ -77,8 +77,6 @@ $(document).ready(function () {
             $.fn.fullpage.setScrollingSpeed(0);
             $.fn.fullpage.moveTo(href);
             $.fn.fullpage.setScrollingSpeed(speed);
-
-            location.href = href;
         });
     }
 
